@@ -1,9 +1,8 @@
-
 services:
     potogan.twig.extension.addglobals:
         class: Potogan\TwigBundle\Twig\AddGlobals
         arguments:
-          - @service_container
-          - %potogan.twig.addglobals%
+            - @service_container
+            - %potogan.twig.addglobals%
         tags:
             - { name: twig.extension }

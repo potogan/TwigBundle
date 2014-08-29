@@ -1,4 +1,5 @@
 <?php
+
 namespace Potogan\TwigBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
@@ -11,24 +12,24 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
  */
 class Configuration implements ConfigurationInterface
 {
-	/**
+    /**
 	 * {@inheritDoc}
 	 */
-	public function getConfigTreeBuilder()
-	{
-		$treeBuilder = new TreeBuilder();
-		$rootNode = $treeBuilder->root('potogan_twig');
+    public function getConfigTreeBuilder()
+    {
+        $treeBuilder = new TreeBuilder();
+        $rootNode = $treeBuilder->root('potogan_twig');
 
-		$rootNode
-			->children()
-				->node('addglobals', 'array')
-					->useAttributeAsKey('key')
-					->prototype('scalar')
-					->end()
-				->end()
-			->end()
-		;
+        $rootNode
+            ->children()
+                ->node('addglobals', 'array')
+                    ->useAttributeAsKey('key')
+                    ->prototype('scalar')
+                    ->end()
+                ->end()
+            ->end()
+        ;
 
-		return $treeBuilder;
-	}
+        return $treeBuilder;
+    }
 }

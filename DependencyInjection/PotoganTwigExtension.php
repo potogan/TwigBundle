@@ -1,4 +1,5 @@
 <?php
+
 namespace Potogan\TwigBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
